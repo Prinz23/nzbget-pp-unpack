@@ -73,7 +73,7 @@ if os.environ.has_key('NZBOP_SCRIPTDIR') and not os.environ['NZBOP_VERSION'][0:5
         sys.exit(POSTPROCESS_NONE)
 
     # Check unpack status
-    if os.environ['NZBPP_UNPACKSTATUS'] == '1':
+    if os.environ['NZBPP_UNPACKSTATUS'] == '1' or os.environ['NZBPP_UNPACKSTATUS'] == '3' or os.environ['NZBPP_UNPACKSTATUS'] == '4':
         print "[INFO] Unpack failed, setting status \"failed\""
         status = 1
         sys.exit(POSTPROCESS_NONE)
